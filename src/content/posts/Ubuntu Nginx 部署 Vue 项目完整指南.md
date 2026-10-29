@@ -3,6 +3,7 @@
 title: Ubuntu Nginx 部署 Vue 项目完整指南
 published: 2026-06-07
 description: 从 Nginx 安装与服务管理讲起，涵盖 Vue 3（Vite）项目打包部署、Vue Router 的 history 与 hash 模式、子路径部署及反向代理等常见场景。
+image: ./images/ubuntu-nginx-vue-cover.webp
 tags: [Vue, 开发]
 category: 前端开发
 draft: false
