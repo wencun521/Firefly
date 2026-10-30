@@ -91,19 +91,19 @@ export const siteConfig: SiteConfig = {
 	favicon: [
 		{
 			// 图标文件路径
-			src: "/favicon/tender-32.png",
+			src: "/favicon/tender-icon-32.png",
 			sizes: "32x32",
 		},
 		{
-			src: "/favicon/tender-128.png",
+			src: "/favicon/tender-icon-128.png",
 			sizes: "128x128",
 		},
 		{
-			src: "/favicon/tender-180.png",
+			src: "/favicon/tender-icon-180.png",
 			sizes: "180x180",
 		},
 		{
-			src: "/favicon/tender-192.png",
+			src: "/favicon/tender-icon-192.png",
 			sizes: "192x192",
 		},
 	],
