@@ -1,0 +1,102 @@
+media:
+  input: public/images/posts
+  output: /images/posts
+
+content:
+  - name: posts
+    label: 文章
+    type: collection
+    path: src/content/posts
+    filename: "{fields.title}.md"
+    view:
+      fields: [title, published, draft]
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: published
+        label: 发布日期
+        type: date
+        required: true
+        options:
+          format: "yyyy-MM-dd"
+      - name: description
+        label: 描述
+        type: text
+      - name: image
+        label: 封面
+        type: image
+      - name: tags
+        label: 标签
+        type: string
+        list: true
+      - name: category
+        label: 分类
+        type: string
+      - name: draft
+        label: 草稿
+        type: boolean
+        default: false
+      - name: pinned
+        label: 置顶
+        type: boolean
+        default: false
+      - name: series
+        label: 系列
+        type: string
+      - name: seriesOrder
+        label: 系列序号
+        type: number
+      - name: password
+        label: 访问密码
+        type: string
+      - name: passwordHint
+        label: 密码提示
+        type: string
+      - name: body
+        label: 正文
+        type: rich-text
+
+  - name: about
+    label: 关于页面
+    type: file
+    path: src/content/spec/about.md
+    fields:
+      - name: body
+        label: 正文
+        type: rich-text
+
+  - name: site
+    label: 站点信息
+    type: file
+    path: src/config/site.json
+    fields:
+      - name: title
+        label: 站点标题
+        type: string
+        required: true
+      - name: subtitle
+        label: 站点副标题
+        type: string
+      - name: site_url
+        label: 站点 URL
+        type: string
+        required: true
+      - name: description
+        label: 站点描述
+        type: text
+      - name: keywords
+        label: 关键词
+        type: string
+        list: true
+      - name: siteStartDate
+        label: 建站日期
+        type: string
+        pattern: '^\d{4}-\d{2}-\d{2}$'
+      - name: themeHue
+        label: 主题色相（0-360）
+        type: number
+        options:
+          min: 0
+          max: 360

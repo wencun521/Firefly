@@ -1,6 +1,7 @@
 import type { SiteConfig } from "@/types/siteConfig";
 import { resolvePageToggles } from "../utils/page-toggle-utils";
 import { resolveSiteLang } from "../utils/site-config-utils";
+import siteData from "./site.json";
 
 // 定义站点语言
 // 语言代码，例如：'zh_CN', 'zh_TW', 'en', 'ja', 'ru', 'ko'。
@@ -41,34 +42,21 @@ const pages = resolvePageToggles({
 });
 
 export const siteConfig: SiteConfig = {
-	// 站点标题
-	title: "Tender",
+	// 站点标题、副标题、URL、描述、关键词、建站日期、主题色相
+	// 这些基础信息可在 Pages CMS 后台的「站点信息」中修改，存放在 site.json
+	title: siteData.title,
 
-	// 站点副标题
-	subtitle: "Tender",
+	subtitle: siteData.subtitle,
 
-	// 站点 URL
-	site_url: "https://blog.tenderme.top",
+	site_url: siteData.site_url,
 
-	// 站点描述
-	description:
-		"Tender 的个人博客，记录前端开发、Vue 与 Linux 部署实践，以及日常学习中的折腾与思考。",
+	description: siteData.description,
 
-	// 站点关键词
-	keywords: [
-		"Tender",
-		"个人博客",
-		"前端开发",
-		"Vue",
-		"Astro",
-		"Linux",
-		"技术博客",
-	],
+	keywords: siteData.keywords,
 
-	// 主题色
 	themeColor: {
 		// 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
-		hue: 22,
+		hue: siteData.themeHue,
 		// 默认模式："light" 亮色，"dark" 暗色，"system" 跟随系统
 		defaultMode: "system",
 	},
@@ -141,7 +129,7 @@ export const siteConfig: SiteConfig = {
 	},
 
 	// 站点开始日期，用于统计运行天数
-	siteStartDate: "2026-10-29",
+	siteStartDate: siteData.siteStartDate,
 
 	// 站点时区（IANA 时区字符串），用于格式化bangumi、rss里的构建日期时间等等..
 	// 示例："Asia/Shanghai", "UTC", 如果为空，则按照构建服务器的时区进行时区转换

@@ -1,0 +1,17 @@
+{
+	"title": "Tender",
+	"subtitle": "Tender",
+	"site_url": "https://blog.tenderme.top",
+	"description": "Tender 的个人博客，记录前端开发、Vue 与 Linux 部署实践，以及日常学习中的折腾与思考。",
+	"keywords": [
+		"Tender",
+		"个人博客",
+		"前端开发",
+		"Vue",
+		"Astro",
+		"Linux",
+		"技术博客"
+	],
+	"siteStartDate": "2026-10-29",
+	"themeHue": 22
+}
