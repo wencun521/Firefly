@@ -1,13 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Tender">
 	<defs>
-		<linearGradient id="tender-bg" x1="0" y1="0" x2="1" y2="1">
-			<stop offset="0" stop-color="#FFD8C6" />
-			<stop offset=".5" stop-color="#FFA6AE" />
-			<stop offset="1" stop-color="#E2607C" />
-		</linearGradient>
+		<mask id="tender-cut">
+			<rect width="512" height="512" fill="#000" />
+			<path d="M256 380C166 316 100 254 100 192c0-54 44-92 96-92 30 0 52 16 60 36 8-20 30-36 60-36 52 0 96 38 96 92 0 62-66 124-156 188z" fill="#fff" />
+			<g fill="none" stroke="#000" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M256 330c0-52 2-88 20-122" />
+				<path d="M276 210c6-22 26-34 48-30-2 24-20 38-44 34z" />
+				<path d="M258 262c-18-14-40-14-56-4 10 20 32 28 52 20z" />
+			</g>
+		</mask>
 	</defs>
-	<rect width="512" height="512" rx="116" fill="url(#tender-bg)" />
-	<path d="M206 142a150 150 0 0 0 0 228" fill="none" stroke="#fff" stroke-width="52" stroke-linecap="round" />
-	<path d="M306 142a150 150 0 0 1 0 228" fill="none" stroke="#fff" stroke-width="52" stroke-linecap="round" />
-	<circle cx="256" cy="256" r="38" fill="#fff" />
+	<rect width="512" height="512" fill="#1F2430" mask="url(#tender-cut)" />
 </svg>
